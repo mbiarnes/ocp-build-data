@@ -3,8 +3,8 @@ content:
     dockerfile: images/Dockerfile.ocp
     git:
       branch:
-        target: release-{MAJOR}.{MINOR}
-      url: git@github.com:openshift-priv/agent-installer-utils.git
+        target: art-consistency-openshift-4.14-ose-agent-installer-utils
+      url: git@github.com:openshift-bot/agent-installer-utils.git
       web: https://github.com/openshift/agent-installer-utils
     ci_alignment:
       streams_prs:
@@ -12,6 +12,7 @@ content:
           stream: rhel-9-golang-ci-build-root
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
+  component: ose-agent-installer-utils-container
 enabled_repos:
 - rhel-9-appstream-rpms
 - rhel-9-baseos-rpms
