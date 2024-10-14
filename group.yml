@@ -19,6 +19,10 @@ arches:
 multi_arch:
   enabled: false
 
+# It is not decided yet from which OCP version on a new release version will have the format i.e. 4.18.0-0
+# Until then the new_payload_versioning_scheme will have the value False
+new_payload_versioning_scheme: true
+
 operator_image_ref_mode: manifest-list
 
 # wip see: issues.redhat.com/browse/ART-3107
