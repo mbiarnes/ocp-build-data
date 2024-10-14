@@ -23,6 +23,10 @@ multi_arch:
 
 operator_image_ref_mode: manifest-list
 
+# It is not decided yet from which OCP version on a new release version will have the format i.e. 4.18.0-0
+# Until then the new_payload_versioning_scheme will have the value False
+new_payload_versioning_scheme: true
+
 signing_advisory: 135498
 
 build_profiles:
