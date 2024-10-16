@@ -41,6 +41,8 @@ arches:
 multi_arch:
   enabled: true
 
+new_payload_versioning_scheme: true  
+
 operator_image_ref_mode: manifest-list
 
 signing_advisory: 136879
