@@ -13,6 +13,11 @@ releases:
         component: local-storage-mustgather
       members:
         images:
+        - distgit_key: ose-installer-artifacts
+          metadata:
+            is:
+              nvr: ose-installer-artifacts-container-v4.19.0-202411260743.p0.g14f5ce8.assembly.stream.el9
+          why: This is for testing only.
         - distgit_key: '*'
           why: Exclude rpm updates that should not cause mass rebuilds
           metadata:
