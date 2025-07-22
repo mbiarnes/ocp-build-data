@@ -3,9 +3,9 @@ content:
     dockerfile: Dockerfile.openshift
     git:
       branch:
-        target: release-{MAJOR}.{MINOR}
-      url: git@github.com:openshift-priv/bond-cni.git
-      web: https://github.com/openshift/bond-cni
+        target: updateplugins171release417
+      url: git@github.com:mlguerrero12/bond-cni-1.git
+      web: https://github.com/mlguerrero12/bond-cni-1
 distgit:
   branch: rhaos-{MAJOR}.{MINOR}-rhel-9
   component: ose-network-interface-bond-cni-container
