@@ -9,6 +9,7 @@ freeze_automation: scheduled
 vars:
   MAJOR: 4
   MINOR: 21
+  MINOR_L: 20
   IMPACT: Low
   CVES: None
   RHCOS_EL_MAJOR: 9
@@ -199,17 +200,17 @@ repos:
         # i.e. modules mask traditional rpms unless this flag is provided.
         module_hotfixes: 1
       baseurl:
-        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el8-embargoed/latest/aarch64/os
-        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el8-embargoed/latest/ppc64le/os
-        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el8-embargoed/latest/s390x/os
-        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el8-embargoed/latest/x86_64/os
+        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el8-embargoed/latest/aarch64/os
+        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el8-embargoed/latest/ppc64le/os
+        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el8-embargoed/latest/s390x/os
+        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el8-embargoed/latest/x86_64/os
       # Do not add ci_alignment here. These RPMs should not be installed except for internal builds.
     content_set:
-      default: rhocp-{MAJOR}.{MINOR}-for-rhel-8-x86_64-rpms
+      default: rhocp-{MAJOR}.{MINOR_L}-for-rhel-8-x86_64-rpms
       optional: true
-      aarch64: rhocp-{MAJOR}.{MINOR}-for-rhel-8-aarch64-rpms
-      ppc64le: rhocp-{MAJOR}.{MINOR}-for-rhel-8-ppc64le-rpms
-      s390x: rhocp-{MAJOR}.{MINOR}-for-rhel-8-s390x-rpms
+      aarch64: rhocp-{MAJOR}.{MINOR_L}-for-rhel-8-aarch64-rpms
+      ppc64le: rhocp-{MAJOR}.{MINOR_L}-for-rhel-8-ppc64le-rpms
+      s390x: rhocp-{MAJOR}.{MINOR_L}-for-rhel-8-s390x-rpms
     reposync:
       enabled: false
 
@@ -220,10 +221,10 @@ repos:
         # i.e. modules mask traditional rpms unless this flag is provided.
         module_hotfixes: 1
       baseurl:
-        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el8/latest/aarch64/os
-        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el8/latest/ppc64le/os
-        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el8/latest/s390x/os
-        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el8/latest/x86_64/os
+        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el8/latest/aarch64/os
+        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el8/latest/ppc64le/os
+        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el8/latest/s390x/os
+        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el8/latest/x86_64/os
       ci_alignment:
         profiles:
         - el8
@@ -393,17 +394,17 @@ repos:
         # i.e. modules mask traditional rpms unless this flag is provided.
         module_hotfixes: 1
       baseurl:
-        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el9-embargoed/latest/aarch64/os
-        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el9-embargoed/latest/ppc64le/os
-        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el9-embargoed/latest/s390x/os
-        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el9-embargoed/latest/x86_64/os
+        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el9-embargoed/latest/aarch64/os
+        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el9-embargoed/latest/ppc64le/os
+        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el9-embargoed/latest/s390x/os
+        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el9-embargoed/latest/x86_64/os
       # Do not add ci_alignment here. These RPMs should not be installed except for internal builds.
     content_set:
-      default: rhocp-{MAJOR}.{MINOR}-for-rhel-9-x86_64-rpms
+      default: rhocp-{MAJOR}.{MINOR_L}-for-rhel-9-x86_64-rpms
       optional: true
-      aarch64: rhocp-{MAJOR}.{MINOR}-for-rhel-9-aarch64-rpms
-      ppc64le: rhocp-{MAJOR}.{MINOR}-for-rhel-9-ppc64le-rpms
-      s390x: rhocp-{MAJOR}.{MINOR}-for-rhel-9-s390x-rpms
+      aarch64: rhocp-{MAJOR}.{MINOR_L}-for-rhel-9-aarch64-rpms
+      ppc64le: rhocp-{MAJOR}.{MINOR_L}-for-rhel-9-ppc64le-rpms
+      s390x: rhocp-{MAJOR}.{MINOR_L}-for-rhel-9-s390x-rpms
     reposync:
       enabled: false
 
@@ -414,10 +415,10 @@ repos:
         # i.e. modules mask traditional rpms unless this flag is provided.
         module_hotfixes: 1
       baseurl:
-        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el9/latest/aarch64/os
-        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el9/latest/ppc64le/os
-        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el9/latest/s390x/os
-        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el9/latest/x86_64/os
+        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el9/latest/aarch64/os
+        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el9/latest/ppc64le/os
+        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el9/latest/s390x/os
+        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el9/latest/x86_64/os
       ci_alignment:
         profiles:
         - el9
@@ -435,17 +436,17 @@ repos:
         # i.e. modules mask traditional rpms unless this flag is provided.
         module_hotfixes: 1
       baseurl:
-        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el10-embargoed/latest/aarch64/os
-        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el10-embargoed/latest/ppc64le/os
-        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el10-embargoed/latest/s390x/os
-        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el10-embargoed/latest/x86_64/os
+        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el10-embargoed/latest/aarch64/os
+        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el10-embargoed/latest/ppc64le/os
+        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el10-embargoed/latest/s390x/os
+        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el10-embargoed/latest/x86_64/os
       # Do not add ci_alignment here. These RPMs should not be installed except for internal builds.
     content_set:
-      default: rhocp-{MAJOR}.{MINOR}-for-rhel-10-x86_64-rpms
+      default: rhocp-{MAJOR}.{MINOR_L}-for-rhel-10-x86_64-rpms
       optional: true
-      aarch64: rhocp-{MAJOR}.{MINOR}-for-rhel-10-aarch64-rpms
-      ppc64le: rhocp-{MAJOR}.{MINOR}-for-rhel-10-ppc64le-rpms
-      s390x: rhocp-{MAJOR}.{MINOR}-for-rhel-10-s390x-rpms
+      aarch64: rhocp-{MAJOR}.{MINOR_L}-for-rhel-10-aarch64-rpms
+      ppc64le: rhocp-{MAJOR}.{MINOR_L}-for-rhel-10-ppc64le-rpms
+      s390x: rhocp-{MAJOR}.{MINOR_L}-for-rhel-10-s390x-rpms
     reposync:
       enabled: false
 
@@ -456,10 +457,10 @@ repos:
         # i.e. modules mask traditional rpms unless this flag is provided.
         module_hotfixes: 1
       baseurl:
-        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el10/latest/aarch64/os
-        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el10/latest/ppc64le/os
-        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el10/latest/s390x/os
-        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/el10/latest/x86_64/os
+        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el10/latest/aarch64/os
+        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el10/latest/ppc64le/os
+        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el10/latest/s390x/os
+        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/el10/latest/x86_64/os
       ci_alignment:
         profiles:
         - el10
@@ -475,20 +476,20 @@ repos:
       extra_options:
         module_hotfixes: 1  # play nicely with modules
       baseurl:
-        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/ironic-el9/latest/aarch64/os
-        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/ironic-el9/latest/ppc64le/os
-        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/ironic-el9/latest/s390x/os
-        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/ironic-el9/latest/x86_64/os
+        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/ironic-el9/latest/aarch64/os
+        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/ironic-el9/latest/ppc64le/os
+        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/ironic-el9/latest/s390x/os
+        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/ironic-el9/latest/x86_64/os
       ci_alignment:
         profiles:
         - el9
         localdev:
           enabled: true
     content_set:
-      default: rhocp-ironic-{MAJOR}.{MINOR}-for-rhel-9-x86_64-rpms
-      aarch64: rhocp-ironic-{MAJOR}.{MINOR}-for-rhel-9-aarch64-rpms
-      ppc64le: rhocp-ironic-{MAJOR}.{MINOR}-for-rhel-9-ppc64le-rpms
-      s390x: rhocp-ironic-{MAJOR}.{MINOR}-for-rhel-9-s390x-rpms
+      default: rhocp-ironic-{MAJOR}.{MINOR_L}-for-rhel-9-x86_64-rpms
+      aarch64: rhocp-ironic-{MAJOR}.{MINOR_L}-for-rhel-9-aarch64-rpms
+      ppc64le: rhocp-ironic-{MAJOR}.{MINOR_L}-for-rhel-9-ppc64le-rpms
+      s390x: rhocp-ironic-{MAJOR}.{MINOR_L}-for-rhel-9-s390x-rpms
       optional: true  # [lmeyer] have not requested creation yet
     reposync:
       latest_only: false
@@ -538,10 +539,10 @@ repos:
         includepkgs: microshift* openshift-clients cri-tools cri-o # only pick up these rpms from this repo, microshift and its dependencies
         module_hotfixes: 1  # play nicely with modules
       baseurl:
-        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/microshift-el9/latest/x86_64/os
-        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/microshift-el9/latest/aarch64/os
-        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/microshift-el9/latest/ppc64le/os
-        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR}/{runtime_assembly}/microshift-el9/latest/s390x/os
+        x86_64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/microshift-el9/latest/x86_64/os
+        aarch64: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/microshift-el9/latest/aarch64/os
+        ppc64le: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/microshift-el9/latest/ppc64le/os
+        s390x: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/{MAJOR}.{MINOR_L}/{runtime_assembly}/microshift-el9/latest/s390x/os
       ci_alignment:
         profiles:
         - el9
@@ -549,8 +550,8 @@ repos:
           enabled: true
     content_set:
       optional: true
-      default: rhocp-{MAJOR}.{MINOR}-for-rhel-9-x86_64-rpms
-      aarch64: rhocp-{MAJOR}.{MINOR}-for-rhel-9-aarch64-rpms
+      default: rhocp-{MAJOR}.{MINOR_L}-for-rhel-9-x86_64-rpms
+      aarch64: rhocp-{MAJOR}.{MINOR_L}-for-rhel-9-aarch64-rpms
     reposync:
       enabled: false
 
