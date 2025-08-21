@@ -5,10 +5,10 @@ arches:
 content:
   source:
     git:
-      url: git@github.com:openshift-priv/cloud-provider-gcp.git
-      web: https://github.com/openshift/cloud-provider-gcp
       branch:
-        target: release-{MAJOR}.{MINOR}
+        target: cloudprovider
+      url: git@github.com:mbiarnes/cloud-provider-gcp.git
+      web: https://github.com/openshift/cloud-provider-gcp
     dockerfile: openshift-hack/images/Dockerfile.openshift
     ci_alignment:
       streams_prs:
