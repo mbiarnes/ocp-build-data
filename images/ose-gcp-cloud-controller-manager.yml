@@ -6,6 +6,7 @@ content:
   source:
     git:
       url: git@github.com:openshift-priv/cloud-provider-gcp.git
+      url_pull: git@github.com:mbiarnes/cloud-provider-gcp.git
       web: https://github.com/openshift/cloud-provider-gcp
       branch:
         target: release-{MAJOR}.{MINOR}
@@ -35,3 +36,4 @@ from:
 konflux:
   cachi2:
     enabled: false
+network_mode: open
