@@ -30,3 +30,6 @@ name: openshift/ose-haproxy-router-rhel9
 payload_name: haproxy-router
 owners:
 - aos-network-edge@redhat.com
+# the network mode has to be open until https://issues.redhat.com/browse/ART-14111 is solved to assure this image build without error
+konflux:
+  network_mode: open
