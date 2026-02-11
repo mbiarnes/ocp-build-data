@@ -4,7 +4,7 @@ content:
     git:
       branch:
         target: release-{MAJOR}.{MINOR}
-      url: git@github.com:openshift-priv/aws-node-termination-handler.git
+      url: git@github.com:mbiarnes/aws-node-termination-handler.git
       web: https://github.com/openshift/aws-node-termination-handler
     ci_alignment:
       streams_prs:
