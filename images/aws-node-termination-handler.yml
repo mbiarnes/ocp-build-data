@@ -1,6 +1,6 @@
 content:
   source:
-    dockerfile: /Dockerfile.ocp
+    dockerfile: Dockerfile
     git:
       branch:
         target: release-{MAJOR}.{MINOR}
