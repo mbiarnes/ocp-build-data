@@ -64,7 +64,12 @@ releases:
             ppc64le: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:06b04cdddbfe3d6c5c2676a3ff8b12ec01334391347a16eac5d6c21194a6c1e6
             aarch64: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:816827a8884beb3be32f2d88baa2c9651ef40e56567c4f96329a4d40f1b474df
       members:
-        rpms: []
+        rpms:
+          - distgit_key: ignition
+            why: Pin required ignition to assembly
+            metadata:
+              is:
+                el9: ignition-2.21.0-6.el9_6
         images:
           - distgit_key: ose-baremetal-installer
             why: Pin build due to differing global network_mode config for the build that's in nightly
