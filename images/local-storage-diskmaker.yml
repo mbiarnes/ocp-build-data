@@ -7,6 +7,7 @@ content:
         # Do not change branch without team approval
         target: release-4.18
       url: git@github.com:openshift-priv/local-storage-operator.git
+      url_pull: git@github.com:mbiarnes/local-storage-operator.git
       web: https://github.com/openshift/local-storage-operator
 dependents:
 - local-storage-operator
