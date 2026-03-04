@@ -1,4 +1,4 @@
-FROM registry-proxy.engineering.redhat.com/rh-osbs/openshift-ci-openshift-golang-builder-latest-rhel9:v4.20
+FROM registry-proxy.engineering.redhat.com/rh-osbs/openshift-ci-openshift-golang-builder-latest-rhel9:v4.21
 USER root
 
 RUN dnf -y install python3 jq gettext python3-pyyaml \
