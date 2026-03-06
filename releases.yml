@@ -42,6 +42,8 @@ releases:
           component: ose-tools
         - code: CONFLICTING_INHERITED_DEPENDENCY
           component: rhcos
+        - code: IMPERMISSIBLE
+          component: monitoring-operator
       rhcos:
         rhel-coreos:
           images:
