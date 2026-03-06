@@ -79,7 +79,7 @@ releases:
             why: pinned monitoring-plugin version which has konflux build
             metadata:
               is:
-                nvr: monitoring-plugin-container-v4.21.0-202603041835.p2.gc2a9d0b.assembly.stream.el9
+                nvr: monitoring-plugin-container-v4.21.0-202603060841.p2.gc2a9d0b.assembly.stream.el9
   4.21.4:
     assembly:
       type: standard
