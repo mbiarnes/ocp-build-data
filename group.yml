@@ -131,10 +131,10 @@ check_external_packages:
     condition: match
   - name: crun
     tag: rhaos-{MAJOR}.{MINOR}-rhel-{RHCOS_EL_MAJOR}-candidate
-    condition: match
+    condition: greater_equal
   - name: conmon
     tag: rhaos-{MAJOR}.{MINOR}-rhel-{RHCOS_EL_MAJOR}-candidate
-    condition: match
+    condition: greater_equal
   - name: conmon-rs
     tag: rhaos-{MAJOR}.{MINOR}-rhel-{RHCOS_EL_MAJOR}-candidate
     condition: match
@@ -143,28 +143,28 @@ check_external_packages:
     condition: match
   - name: container-selinux
     tag: rhaos-{MAJOR}.{MINOR}-rhel-{RHCOS_EL_MAJOR}-candidate
-    condition: match
+    condition: greater_equal
   - name: containers-common
     tag: rhaos-{MAJOR}.{MINOR}-rhel-{RHCOS_EL_MAJOR}-candidate
-    condition: match
+    condition: greater_equal
   - name: podman
     tag: rhaos-{MAJOR}.{MINOR}-rhel-{RHCOS_EL_MAJOR}-candidate
-    condition: match
+    condition: greater_equal
   - name: skopeo
     tag: rhaos-{MAJOR}.{MINOR}-rhel-{RHCOS_EL_MAJOR}-candidate
-    condition: match
+    condition: greater_equal
   - name: runc
     tag: rhaos-{MAJOR}.{MINOR}-rhel-{RHCOS_EL_MAJOR}-candidate
     condition: match
   - name: toolbox
     tag: rhaos-{MAJOR}.{MINOR}-rhel-{RHCOS_EL_MAJOR}-candidate
-    condition: match
+    condition: greater_equal
   - name: NetworkManager
     tag: rhaos-{MAJOR}.{MINOR}-rhel-{RHCOS_EL_MAJOR}-candidate
     condition: greater_equal
   - name: kernel
     tag: rhaos-{MAJOR}.{MINOR}-rhel-{RHCOS_EL_MAJOR}-candidate
-    condition: match
+    condition: greater_equal
 
 default_image_build_profile: unsigned
 default_rpm_build_profile: default
