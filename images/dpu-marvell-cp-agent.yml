@@ -134,6 +134,7 @@ konflux:
       - libnghttp2
       - libomp
       - libomp-devel
+      - librepo
       - librhsm
       - libselinux
       - libselinux-devel
