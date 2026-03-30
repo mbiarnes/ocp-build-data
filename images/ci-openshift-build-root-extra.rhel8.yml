@@ -9,6 +9,7 @@ content:
       branch:
         target: openshift-{MAJOR}.{MINOR}
       url: git@github.com:openshift-priv/ocp-build-data.git
+      url_pull: git@github.com:mbiarnes/ocp-build-data.git
       web: https://github.com/openshift-eng/ocp-build-data
     ci_alignment:
       streams_prs:
