@@ -3,8 +3,9 @@ content:
   source:
     git:
       branch:
-        target: openshift-base-nodejs-rhel9
+        target: upgrade-npm-10.8.1
       url: git@github.com:openshift-priv/ocp-build-data.git
+      url_pull: git@github.com:mbiarnes/ocp-build-data.git
       web: https://github.com/openshift-eng/ocp-build-data
     ci_alignment:
       streams_prs:
