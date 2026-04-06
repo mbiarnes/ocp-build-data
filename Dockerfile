@@ -14,7 +14,12 @@ FROM nodejs
 
 USER root
 RUN echo 'skip_missing_names_on_install=0' >> /etc/yum.conf \
- && echo 'exclude=nodejs nodejs-docs nodejs-full-i18n npm nodejs-libs' >> /etc/yum.conf \
+ && echo 'exclude=nodejs nodejs-docs nodejs-full-i18n nodejs-libs' >> /etc/yum.conf \
  && yum update -y  \
  && yum clean all
+
+# Upgrade npm to 10.8.1 for cachi2 hermetic build support
+# npm 10.8.1+ properly handles offline dependency resolution
+RUN npm install -g npm@10.8.1
+
 USER 1001
