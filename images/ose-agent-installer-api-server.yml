@@ -64,6 +64,9 @@ konflux:
       - libxcrypt-devel
       - make
       - nmstate-devel
+      - nmstate-libs
+      - perl-Git
+      - postgresql-server
 okd:
   enabled_repos:
   - rhel-9-appstream-rpms
