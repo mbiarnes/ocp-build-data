@@ -64,12 +64,17 @@ konflux:
       - libstdc++
       - libstdc++-devel
       - libubsan
+      - libvirt-libs
       - libxcrypt-devel
       - make
       - NetworkManager-config-server
+      - nmstate
       - nmstate-devel
       - nmstate-libs
+      - openshift-clients
       - perl-Git
+      - postgresql-server
+      - skopeo
 okd:
   enabled_repos:
   - rhel-9-appstream-rpms
