@@ -28,6 +28,8 @@ labels:
 
 name: openshift/golang-builder
 
+name_in_bundle: golang-builder-94
+
 owners:
 - aos-team-art@redhat.com
 
