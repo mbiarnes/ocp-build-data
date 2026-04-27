@@ -17,7 +17,7 @@ content:
       replacement: node .yarn/releases/yarn-3.4.1.cjs install --immutable;
     - action: replace
       match: yarn install --immutable && yarn build:all;
-      replacement: node .yarn/releases/yarn-3.4.1.cjs build:all;
+      replacement: node .yarn/releases/yarn-3.8.7.cjs build:all;
     pkg_managers:
     - yarn
     artifacts:
