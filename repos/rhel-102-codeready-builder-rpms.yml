@@ -1,0 +1,20 @@
+- conf:
+    baseurl:
+      aarch64: https://download.devel.redhat.com/rhel-10/nightly/RHEL-10/latest-RHEL-10.2/compose/CRB/aarch64/os/
+      ppc64le: https://download.devel.redhat.com/rhel-10/nightly/RHEL-10/latest-RHEL-10.2/compose/CRB/ppc64le/os/
+      s390x: https://download.devel.redhat.com/rhel-10/nightly/RHEL-10/latest-RHEL-10.2/compose/CRB/s390x/os/
+      x86_64: https://download.devel.redhat.com/rhel-10/nightly/RHEL-10/latest-RHEL-10.2/compose/CRB/x86_64/os/
+    ci_alignment:
+      localdev:
+        enabled: true
+      profiles:
+      - el10
+    extra_options:
+      gpgcheck: '1'
+      module_hotfixes: 1
+  content_set:
+    optional: true
+  name: rhel-102-codeready-builder-rpms
+  reposync:
+    enabled: true
+  type: external
